@@ -32,15 +32,15 @@ import org.exoplatform.services.rest.resource.ResourceContainer;
 @Path("/dateService/")
 public class DateService implements ResourceContainer {
 
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/dateService/diffDate/11-05-2011/11-07-2012/Min
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/dateService/diffDate/11-05-2011/11-07-2012/Hour
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/dateService/diffDate/11-05-2011/11-07-2012/Day
+	// http://localhost:8080/rest/dateService/diffDate/11-05-2011/11-07-2012/Min
+	// http://localhost:8080/rest/dateService/diffDate/11-05-2011/11-07-2012/Hour
+	// http://localhost:8080/rest/dateService/diffDate/11-05-2011/11-07-2012/Day
 	@GET
 	@Path("/diffDate/{date1}/{date2}/{resultType}")
 	public String diffDate(@PathParam("date1") String date1,
 			@PathParam("date2") String date2,
 			@PathParam("resultType") String resultType) {
-		String errorMsg = "url is not in correct format. Good url ex :  http://localhost:8080/ecmdemo/rest-ecmdemo/dateService/diffDate/11-05-2011/11-07-2012/Min";
+		String errorMsg = "url is not in correct format. Good url ex :  http://localhost:8080/rest/dateService/diffDate/11-05-2011/11-07-2012/Min";
 		if (date1 == null || date2 == null) {
 			return errorMsg;
 		}

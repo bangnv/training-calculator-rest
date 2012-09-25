@@ -30,6 +30,8 @@ import org.exoplatform.services.rest.resource.ResourceContainer;
 @Path("/rest/")
 public class HelloService implements ResourceContainer {
 
+	// http://localhost:8080/rest/rest/helloworld
+
 	@GET
 	@Path("/helloworld/")
 	public String helloworld(@QueryParam("name") String name) throws Exception {

@@ -29,7 +29,7 @@ import org.exoplatform.services.rest.resource.ResourceContainer;
 @Path("/calculService/")
 public class CalculService implements ResourceContainer {
 
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/plus/1/2
+// in gate in http://localhost:8080/rest/calculService/plus/1/2
 	@GET
 	@Path("/plus/{x}/{y}")
 	public String plusOperator(@PathParam("x") String x,
@@ -42,12 +42,12 @@ public class CalculService implements ResourceContainer {
 			x_convert = Float.valueOf(x);
 			y_convert = Float.valueOf(y);
 		} catch (java.lang.NumberFormatException e) {
-			return "Type of x and y must be Integer, exemple : http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/plus/1/2";
+			return "Type of x and y must be Integer, exemple : http://localhost:8080/rest/calculService/plus/1/2";
 		}
 		return String.valueOf(x_convert + y_convert);
 	}
 
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/subs/1/2
+	// http://localhost:8080/rest/calculService/subs/1/2
 	@GET
 	@Path("/subs/{x}/{y}")
 	public String subsOperator(@PathParam("x") String x,
@@ -57,12 +57,12 @@ public class CalculService implements ResourceContainer {
 			x_convert = Float.valueOf(x);
 			y_convert = Float.valueOf(y);
 		} catch (java.lang.NumberFormatException e) {
-			return "Type of x and y must be Integer, exemple : http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/subs/1/2";
+			return "Type of x and y must be Integer, exemple : http://localhost:8080/rest/calculService/subs/1/2";
 		}
 		return String.valueOf(x_convert - y_convert);
 	}
 
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/multi/1/2
+	// http://localhost:8080/rest/calculService/multi/1/2
 	@GET
 	@Path("/multi/{x}/{y}")
 	public String multiOperator(@PathParam("x") String x,
@@ -72,12 +72,12 @@ public class CalculService implements ResourceContainer {
 			x_convert = Float.valueOf(x);
 			y_convert = Float.valueOf(y);
 		} catch (java.lang.NumberFormatException e) {
-			return "Type of x and y must be Integer, exemple : http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/multi/1/2";
+			return "Type of x and y must be Integer, exemple : http://localhost:8080/rest/calculService/multi/1/2";
 		}
 		return String.valueOf(x_convert * y_convert);
 	}
 
-	// http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/div/1/2
+	// http://localhost:8080/rest/calculService/div/1/2
 	@GET
 	@Path("/div/{x}/{y}")
 	public String divOperator(@PathParam("x") String x, @PathParam("y") String y) {
@@ -86,7 +86,7 @@ public class CalculService implements ResourceContainer {
 			x_convert = Float.valueOf(x);
 			y_convert = Float.valueOf(y);
 		} catch (java.lang.NumberFormatException e) {
-			return "Type of x and y must be Integer, exemple : http://localhost:8080/ecmdemo/rest-ecmdemo/calculService/div/1/2";
+			return "Type of x and y must be Integer, exemple : http://localhost:8080/rest/calculService/div/1/2";
 		}
 		return String.valueOf(x_convert / y_convert);
 	}
